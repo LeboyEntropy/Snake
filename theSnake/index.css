@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after{
+	margin: 0;
+	padding: 0;
+}
+ul,li{
+	list-style: none;
+}
+html,body{
+	background-color: #ADD8E6;
+	width: 100%;
+	height: 100%;
+}
+#app{
+	width: 1200px;
+	height: 725px;
+	clear: both;
+	border: 5px solid green;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translateY(-50%,-50%);
+}
+#s_tab{
+	width: 200px;
+	height: 100%;
+	background-color: black;
+	float: left;
+	box-sizing: border-box;
+	border-right: 1px solid green;
+}
+#s_tab>li{
+	width: 100%;
+	height: 130px;
+	text-align: center;
+	line-height: 130px;
+	font-size: 26px;
+	font-weight: 600;
+	color: white;
+	cursor: pointer;
+	border-bottom: 1px solid green;
+	box-sizing: border-box;
+}
+
+.special span{
+	display: inline-block;
+	height: 100%;
+	line-height: 145px;
+	width: 40%;
+	
+}
+.special{
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	-webkit-justify-content: center;
+}
+.special span:last-child{
+	color: red;
+}
+.special ~ li:not("#level"):hover{
+	background-color: white;
+	color: black !important;
+}
+#s_tab #level{
+	width: 100;
+	height: 75px;
+	line-height: 75px;
+	font-size: 22px;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-around;
+	-webkit-justify-content: space-around;
+}
+#s_tab #level span{
+	height: 100%;
+	width: 33%;
+}
+#s_tab #level span:hover{
+	color: red !important;
+	background-color: white !important;
+}
+#s_body{
+	width: 1000px;
+	height: 100%;
+	float: right;
+	background-color: black;
+	color: white;
+	position: relative;
+}
+#s_body>p{
+	color: #fff;
+	float: right;
+	font-size: 12px;
+	opacity: .5;
+}
