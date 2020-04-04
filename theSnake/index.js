@@ -166,14 +166,17 @@ window.onload = function(){
 			}
 			// 判断
 			if(tempFlag || tempFlagBody){
-				alert("BOOM!你选择死亡,总共得分为:"+this.score) 
 				this.score = 0
 				document.getElementById("score").innerHTML = this.score
 				clearInterval(this.id)
 				this.food.dom.remove() 
+				// 只是把dom项删除
 				for(var i = 0 ; i<this.body.length ; i++){
 					this.body[i][2].remove() 
 				}
+				// 清空body
+				this.body = []
+				alert("BOOM!你选择死亡,总共得分为:"+this.score) 
 			}
 			
 		}
@@ -230,6 +233,10 @@ window.onload = function(){
 			}
 			// 继续
 			opts[4].onclick = function(){
+				if(!snake.body.length){
+					alert("都死翘翘了还想着继续？赶快去重置吧！！")
+					return;
+				}
 				clearInterval(snake.id)
 				snake.id = setInterval(function(){
 					snake.move()
